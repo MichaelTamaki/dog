@@ -1,8 +1,15 @@
 // Understands needs and game stats for dog
 function Dog() {
   var obj = {};
+
+  obj.energy = 100;
+
   obj.getStatus = function() {
-    return 'satisfied';
+    if (obj.energy == 0) {
+      return 'tired';
+    } else {
+      return 'satisfied';
+    }
   }
   return obj;
 }
