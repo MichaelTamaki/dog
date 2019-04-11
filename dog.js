@@ -5,6 +5,7 @@ function Dog() {
   var obj = {};
 
   obj.energy = 100;
+  obj.hunger = 100;
 
   // Neutral dog gets tired in 20 mins
   obj.neutral = function() {
@@ -33,6 +34,8 @@ function Dog() {
   obj.getStatus = function() {
     if (obj.energy == 0) {
       return 'tired';
+    } else if (obj.hunger == 0) {
+      return 'hungry';
     } else {
       return 'satisfied';
     }

@@ -47,3 +47,9 @@ test('A resting Dog should switch to neutral upon reaching 100 energy', () => {
   expect(dog.getStatus()).toBe('tired');
   expect(dog.energy).toBe(0);
 });
+
+test('A zero hunger points Dog status should be hungry', () => {
+  var dog = new Dog();
+  dog.hunger = 0;
+  expect(dog.getStatus()).toBe('hungry');
+});
