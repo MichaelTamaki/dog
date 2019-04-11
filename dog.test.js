@@ -53,3 +53,11 @@ test('A zero hunger points Dog status should be hungry', () => {
   dog.hunger = 0;
   expect(dog.getStatus()).toBe('hungry');
 });
+
+test('A Dog should lose hunger points over time', () => {
+  var dog = new Dog();
+  jest.advanceTimersByTime(3*60*60);
+  dog.energy = 100;
+  expect(dog.getStatus()).toBe('hungry');
+  expect(dog.hunger).toBe(0);
+});

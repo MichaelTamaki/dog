@@ -30,6 +30,11 @@ function Dog() {
     }, 60*60/100);
   };
 
+  // Dog gets hungry in 3 hours
+  setInterval(() => {
+    obj.hunger--;
+  }, 3*60*60/100);
+
   // Status based on needs
   obj.getStatus = function() {
     if (obj.energy == 0) {
