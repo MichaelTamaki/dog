@@ -37,6 +37,10 @@ function Dog() {
     }
   }, 3*60*60/100);
 
+  obj.applyItem = function(item) {
+    obj.hunger += item.hunger;
+  }
+
   // Status based on needs
   obj.getStatus = function() {
     if (obj.energy == 0) {

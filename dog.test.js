@@ -67,3 +67,10 @@ test('A Dog\'s hunger points should not go below 0', () => {
   jest.advanceTimersByTime(6*60*60);
   expect(dog.hunger).toBe(0);
 });
+
+test('Applying a food item to a Dog should increase hunger points', () => {
+  var dog = new Dog();
+  dog.hunger = 0;
+  dog.applyItem({'hunger': 50});
+  expect(dog.hunger).toBe(50);
+});
