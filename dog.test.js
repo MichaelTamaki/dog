@@ -22,4 +22,12 @@ test('A resting Dog should recover energy over time', () => {
   expect(dog.getStatus()).toBe('tired');
   jest.advanceTimersByTime(60*60);
   expect(dog.getStatus()).toBe('satisfied');
+  expect(dog.energy).toBe(100);
 });
+
+test('A neutral Dog should lose energy over time', () => {
+  var dog = new Dog();
+  jest.advanceTimersByTime(20*60);
+  expect(dog.getStatus()).toBe('tired');
+  expect(dog.energy).toBe(0);
+})
