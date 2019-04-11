@@ -8,6 +8,9 @@ function Dog() {
   // Neutral dog gets tired in 20 mins
   obj.energyIntervalFn = setInterval(() => {
     obj.energy--;
+    if (obj.energy == 0) {
+      obj.rest();
+    }
   }, 20*60/100);
 
   // Resting dog recovers in an hour

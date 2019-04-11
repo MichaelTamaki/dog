@@ -30,4 +30,11 @@ test('A neutral Dog should lose energy over time', () => {
   jest.advanceTimersByTime(20*60);
   expect(dog.getStatus()).toBe('tired');
   expect(dog.energy).toBe(0);
-})
+});
+
+test('A neutral Dog should switch to resting upon reaching zero energy', () => {
+  var dog = new Dog();
+  jest.advanceTimersByTime(20*60 + 60*60);
+  expect(dog.getStatus()).toBe('satisfied');
+  expect(dog.energy).toBe(100);
+});
