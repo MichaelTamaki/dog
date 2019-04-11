@@ -61,3 +61,9 @@ test('A Dog should lose hunger points over time', () => {
   expect(dog.getStatus()).toBe('hungry');
   expect(dog.hunger).toBe(0);
 });
+
+test('A Dog\'s hunger points should not go below 0', () => {
+  var dog = new Dog();
+  jest.advanceTimersByTime(6*60*60);
+  expect(dog.hunger).toBe(0);
+});
