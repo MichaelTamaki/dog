@@ -38,3 +38,12 @@ test('A neutral Dog should switch to resting upon reaching zero energy', () => {
   expect(dog.getStatus()).toBe('satisfied');
   expect(dog.energy).toBe(100);
 });
+
+test('A resting Dog should switch to neutral upon reaching 100 energy', () => {
+  var dog = new Dog();
+  dog.energy = 0;
+  dog.rest();
+  jest.advanceTimersByTime(60*60 + 20*60);
+  expect(dog.getStatus()).toBe('tired');
+  expect(dog.energy).toBe(0);
+});
