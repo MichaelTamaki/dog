@@ -1,0 +1,23 @@
+{
+  "name": "dog",
+  "version": "0.0.0",
+  "description": "dog",
+  "main": "index.js",
+  "dependencies": {
+    "jest": "^24.7.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichaelTamaki/dog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichaelTamaki/dog/issues"
+  },
+  "homepage": "https://github.com/MichaelTamaki/dog#readme"
+}
